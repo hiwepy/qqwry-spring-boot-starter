@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import org.apache.commons.lang3.SystemUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -33,11 +32,11 @@ public class QQwryAutoConfiguration implements ResourceLoaderAware {
 	@Bean
 	public RandomAccessFile qqwryFile() throws FileNotFoundException, IOException {
 		// 查找resource
-		Resource resource = resourceLoader.getResource(properties.getQqwryDat());
+		Resource resource = resourceLoader.getResource(properties.getLocation());
 		if(resource.isFile()) {
 			return new RandomAccessFile(resource.getFile(), "r");  
 		} else {
-			File qqwry = new File(SystemUtils.getJavaIoTmpDir(), "qqwry.dat");
+			File qqwry = File.createTempFile("qqwry", ".dat");
 			FileCopyUtils.copy(resource.getInputStream(), new FileOutputStream(qqwry));
 			return new RandomAccessFile(qqwry, "r");  
 		}
