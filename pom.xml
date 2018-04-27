@@ -364,6 +364,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<guava.version>24.1-jre</guava.version>
 		<maven.version>3.0</maven.version>
        	<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
@@ -425,6 +426,20 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>${guava.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.github.jarod/qqwry-java -->
+		<!-- <dependency>
+		    <groupId>com.github.jarod</groupId>
+		    <artifactId>qqwry-java</artifactId>
+		    <version>0.7.1</version>
+		</dependency> -->
 
 	</dependencies>
 

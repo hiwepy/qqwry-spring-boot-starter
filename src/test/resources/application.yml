@@ -1,3 +1,3 @@
 qqwry:
-  ip-record-length: 7
-  qqwry-dat: classpath:qqwry.dat
+  external: true
+  location: classpath:qqwry.dat

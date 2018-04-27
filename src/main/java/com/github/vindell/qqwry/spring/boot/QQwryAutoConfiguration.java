@@ -1,10 +1,9 @@
 package com.github.vindell.qqwry.spring.boot;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.nio.file.Paths;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -15,6 +14,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.FileCopyUtils;
+
+import com.github.vindell.qqwry.spring.boot.ext.QQWry;
 
 /**
  * 
@@ -30,21 +31,32 @@ public class QQwryAutoConfiguration implements ResourceLoaderAware {
 	private QQwryProperties properties;
 	
 	@Bean
-	public RandomAccessFile qqwryFile() throws FileNotFoundException, IOException {
-		// 查找resource
-		Resource resource = resourceLoader.getResource(properties.getLocation());
-		if(resource.isFile()) {
-			return new RandomAccessFile(resource.getFile(), "r");  
+	public QQWry qqwry() throws IOException {
+		QQWry qqwry = null;
+		if(properties.isExternal()) {
+			
+			if(new File(properties.getLocation()).exists()) {
+				qqwry = new QQWry(Paths.get(properties.getLocation())); // load qqwry.dat from java.nio.file.Path
+			} else {
+				// 查找resource
+				Resource resource = resourceLoader.getResource(properties.getLocation());
+				
+				try {
+					if(resource.exists()) {
+						ByteArrayOutputStream output = new ByteArrayOutputStream();
+						FileCopyUtils.copy(resource.getInputStream(), output);
+						qqwry = new QQWry(output.toByteArray()); // create QQWry with provided data
+					}
+				} catch (Exception e) {
+					qqwry = new QQWry(); // load qqwry.dat from classpath
+				}
+			}
+			
 		} else {
-			File qqwry = File.createTempFile("qqwry", ".dat");
-			FileCopyUtils.copy(resource.getInputStream(), new FileOutputStream(qqwry));
-			return new RandomAccessFile(qqwry, "r");  
+			qqwry = new QQWry(); // load qqwry.dat from classpath
 		}
-	}
-	
-	@Bean
-	public QQwryTemplate qqwryTemplate(RandomAccessFile qqwryFile) throws IOException {
-		return new QQwryTemplate(qqwryFile, properties.getIpRecordLength());  
+		
+		return qqwry;  
 	}
 
 	@Override
