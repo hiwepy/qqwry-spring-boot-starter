@@ -29,7 +29,7 @@ import java.nio.file.Path;
  * </pre>
  *
  * @author Jarod Liu &lt;liuyuanzhi@gmail.com&gt;
- * {@linkplain https://github.com/jarod/qqwry-java}
+ * https://github.com/jarod/qqwry-java
  */
 public class QQWry {
 
