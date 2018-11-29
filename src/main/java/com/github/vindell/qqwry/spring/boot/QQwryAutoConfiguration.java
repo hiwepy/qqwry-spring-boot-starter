@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +20,6 @@ import com.github.vindell.qqwry.spring.boot.ext.QQWry;
  * 
  */
 @Configuration
-@ConditionalOnProperty(prefix = QQwryProperties.PREFIX, value = "enabled", havingValue = "true")
 @EnableConfigurationProperties({ QQwryProperties.class })
 public class QQwryAutoConfiguration implements ResourceLoaderAware {
 

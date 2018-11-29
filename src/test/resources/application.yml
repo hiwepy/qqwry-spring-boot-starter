@@ -1,3 +1,4 @@
 qqwry:
+  enabled: true
   external: true
   location: classpath:qqwry.dat
