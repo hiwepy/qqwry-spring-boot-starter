@@ -1,6 +1,6 @@
-# spring-boot-starter-qqwry
+# qqwry-spring-boot-starter
 
-qqwry starter for spring boot
+Spring Boot Starter For QQWry
 
 ### 说明
 
@@ -14,7 +14,7 @@ qqwry starter for spring boot
 ``` xml
 <dependency>
 	<groupId>com.github.vindell</groupId>
-	<artifactId>spring-boot-starter-qqwry</artifactId>
+	<artifactId>qqwry-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
 ```
