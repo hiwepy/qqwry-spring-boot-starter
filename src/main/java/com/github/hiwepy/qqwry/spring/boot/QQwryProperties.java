@@ -1,4 +1,4 @@
-package com.github.vindell.qqwry.spring.boot;
+package com.github.hiwepy.qqwry.spring.boot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

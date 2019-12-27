@@ -1,4 +1,4 @@
-package com.github.vindell.qqwry.spring.boot;
+package com.github.hiwepy.qqwry.spring.boot;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -14,7 +14,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.FileCopyUtils;
 
-import com.github.vindell.qqwry.spring.boot.ext.QQWry;
+import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
 
 /**
  * 
