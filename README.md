@@ -15,7 +15,7 @@ Spring Boot Starter For QQWry
 <dependency>
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>qqwry-spring-boot-starter</artifactId>
-	<version>${project.version}</version>
+	<version>1.0.2.RELEASE</version>
 </dependency>
 ```
 
