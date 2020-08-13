@@ -35,9 +35,10 @@ public class Application {
 	@PostConstruct
 	public void test() throws IOException {
 		
+		long startTime = System.currentTimeMillis();
+		System.out.println(qqwry.findIP("61.94.43.82"));
 		System.out.println(qqwry.findIP("127.0.0.1"));
-		System.out.println(qqwry.findIP("127.0.0.1"));
-		
+		System.out.println("Time :" + (System.currentTimeMillis() - startTime));
 	}
 	
 	
