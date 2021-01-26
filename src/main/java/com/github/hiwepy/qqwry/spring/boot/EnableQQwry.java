@@ -29,6 +29,7 @@ import org.springframework.context.annotation.Import;
 @Documented
 @Inherited
 @Import({ QQwryAutoConfiguration.class })
+@Deprecated
 public @interface EnableQQwry {
 
 }
