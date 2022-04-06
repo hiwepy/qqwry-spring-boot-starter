@@ -24,27 +24,22 @@ import com.github.hiwepy.qqwry.spring.boot.ext.IPZone;
 import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
 
 public class QQwry_Test {
-	
-	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss S");		
-	
+
+	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss S");
+
 	public static void main(String args[]) throws IOException {
-		
+
 		QQWry qqwry = new QQWry(); // load qqwry.dat from classpath
-		 
+
 		 //QQWry qqwry = new QQWry(Paths.get("D://qqwry.dat")); // load qqwry.dat from java.nio.file.Path
 
 		// byte[] data = Files.readAllBytes(Paths.get("path/to/qqwry.dat"));
 		 //QQWry qqwry = new QQWry(data); // create QQWry with provided data
-		 
-		 String myIP = "127.0.0.1";
-		 
-		 for (int i = 0; i < 1000; i++) {
-			 IPZone ipzone = qqwry.findIP(myIP);
-			 System.out.printf("%s : %s, %s", df.format(new Date()), ipzone.getMainInfo(), ipzone.getSubInfo());
-			 // IANA, 保留地址用于本地回送
-			 System.out.println();
-		}
-		 
+
+		String myIP = "54.151.155.9";
+		IPZone ipzone = qqwry.findIP(myIP);
+		System.out.printf("%s : %s, %s", df.format(new Date()), ipzone.getMainInfo(), ipzone.getSubInfo());
+
 	}
-	
+
 }
