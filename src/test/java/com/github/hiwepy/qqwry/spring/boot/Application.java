@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.hiwepy.qqwry.spring.boot;
+package io.github.hiwepy.qqwry.spring.boot;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
+import io.github.hiwepy.qqwry.spring.boot.ext.QQWry;
 
 @SpringBootApplication
 public class Application {
