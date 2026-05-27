@@ -1,6 +1,6 @@
-package com.github.hiwepy.qqwry.spring.boot;
+package io.github.hiwepy.qqwry.spring.boot;
 
-import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
+import io.github.hiwepy.qqwry.spring.boot.ext.QQWry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
