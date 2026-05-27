@@ -13,15 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.hiwepy.qqwry.spring.boot;
+package io.github.hiwepy.qqwry.spring.boot;
 
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.github.hiwepy.qqwry.spring.boot.ext.IPZone;
-import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
+import io.github.hiwepy.qqwry.spring.boot.ext.IPZone;
+import io.github.hiwepy.qqwry.spring.boot.ext.QQWry;
 
 public class QQwry_Test {
 

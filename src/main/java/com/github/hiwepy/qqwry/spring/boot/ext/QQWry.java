@@ -1,4 +1,4 @@
-package com.github.hiwepy.qqwry.spring.boot.ext;
+package io.github.hiwepy.qqwry.spring.boot.ext;
 
 
 import java.io.ByteArrayOutputStream;
