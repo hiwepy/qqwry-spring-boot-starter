@@ -14,7 +14,7 @@ Spring Boot Starter For QQWry
 
 ``` xml
 <dependency>
-	<groupId>com.github.hiwepy</groupId>
+	<groupId>io.github.easy4j</groupId>
 	<artifactId>qqwry-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
@@ -45,7 +45,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.github.hiwepy.qqwry.spring.boot.ext.QQWry;
+import io.github.easy4j.qqwry.spring.boot.ext.QQWry;
 
 @EnableQQwry
 @SpringBootApplication
