@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.hiwepy.qqwry.spring.boot.QQwryAutoConfiguration
+io.github.easy4j.qqwry.spring.boot.QQwryAutoConfiguration
