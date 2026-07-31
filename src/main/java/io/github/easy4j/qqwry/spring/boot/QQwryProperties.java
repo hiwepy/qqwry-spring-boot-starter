@@ -1,4 +1,4 @@
-package io.github.hiwepy.qqwry.spring.boot;
+package io.github.easy4j.qqwry.spring.boot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
