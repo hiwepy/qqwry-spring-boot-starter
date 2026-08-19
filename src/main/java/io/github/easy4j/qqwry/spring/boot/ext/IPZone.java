@@ -31,27 +31,51 @@ public class IPZone {
 		this.ip = ip;
 	}
 
+    /**
+     * <p>Returns the ip.</p>
+     * @return the get ip
+     */
 	public String getIp() {
 		return ip;
 	}
 
+    /**
+     * <p>Returns the main info.</p>
+     * @return the get main info
+     */
 	public String getMainInfo() {
 		return mainInfo;
 	}
 
+    /**
+     * <p>Returns the sub info.</p>
+     * @return the get sub info
+     */
 	public String getSubInfo() {
 		return subInfo;
 	}
 
+    /**
+     * <p>Sets the main info.</p>
+     * @param info
+     */
 	public void setMainInfo(final String info) {
 		this.mainInfo = info;
 	}
 
+    /**
+     * <p>Sets the sub info.</p>
+     * @param info
+     */
 	public void setSubInfo(final String info) {
 		this.subInfo = info;
 	}
 
 	@Override
+    /**
+     * <p>To string.</p>
+     * @return the to string
+     */
 	public String toString() {
 		return new StringBuilder(mainInfo).append(subInfo).toString();
 	}

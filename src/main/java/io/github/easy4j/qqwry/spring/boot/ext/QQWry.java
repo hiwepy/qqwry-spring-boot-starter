@@ -117,6 +117,11 @@ public class QQWry {
 		this(Files.readAllBytes(file));
 	}
 
+    /**
+     * <p>Finds the i p.</p>
+     * @param ip
+     * @return the find i p
+     */
 	public IPZone findIP(final String ip) {
 		final long ipNum = toNumericIP(ip);
 		final QIndex idx = searchIndex(ipNum);

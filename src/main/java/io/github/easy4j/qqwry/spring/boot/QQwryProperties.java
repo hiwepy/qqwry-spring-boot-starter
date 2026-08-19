@@ -22,18 +22,34 @@ public class QQwryProperties {
 	 */
 	private String location = "classpath:qqwry.dat";
 
+    /**
+     * <p>Checks if external.</p>
+     * @return the is external
+     */
 	public boolean isExternal() {
 		return external;
 	}
 
+    /**
+     * <p>Sets the external.</p>
+     * @param external
+     */
 	public void setExternal(boolean external) {
 		this.external = external;
 	}
 
+    /**
+     * <p>Returns the location.</p>
+     * @return the get location
+     */
 	public String getLocation() {
 		return location;
 	}
 
+    /**
+     * <p>Sets the location.</p>
+     * @param location
+     */
 	public void setLocation(String location) {
 		this.location = location;
 	}
