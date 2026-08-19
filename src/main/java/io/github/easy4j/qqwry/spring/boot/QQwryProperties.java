@@ -3,6 +3,12 @@ package io.github.easy4j.qqwry.spring.boot;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(QQwryProperties.PREFIX)
+/**
+ * <p>Configuration properties for QQwry.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class QQwryProperties {
 
 	public static final String PREFIX = "qqwry";

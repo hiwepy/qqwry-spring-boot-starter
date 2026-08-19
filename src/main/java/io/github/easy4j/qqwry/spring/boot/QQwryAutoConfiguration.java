@@ -20,6 +20,12 @@ import java.nio.file.Paths;
  */
 @Configuration
 @EnableConfigurationProperties({ QQwryProperties.class })
+/**
+ * <p>Spring Boot auto-configuration for QQwry.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class QQwryAutoConfiguration {
 
 	protected ResourceLoader resourceLoader = new PathMatchingResourcePatternResolver();

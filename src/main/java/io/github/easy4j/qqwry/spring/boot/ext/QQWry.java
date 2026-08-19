@@ -31,6 +31,12 @@ import java.nio.file.Path;
  * @author Jarod Liu &lt;liuyuanzhi@gmail.com&gt;
  * https://github.com/jarod/qqwry-java
  */
+/**
+ * <p>QQWry implementation.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class QQWry {
 
 	private static class QIndex {

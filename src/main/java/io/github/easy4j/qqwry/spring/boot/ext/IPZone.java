@@ -16,6 +16,12 @@
 package io.github.easy4j.qqwry.spring.boot.ext;
 
 
+/**
+ * <p>IPZone implementation.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class IPZone {
 	private final String ip;
 	private String mainInfo = "";
